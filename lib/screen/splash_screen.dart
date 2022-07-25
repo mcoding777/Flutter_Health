@@ -1,5 +1,3 @@
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'dart:async';
 import 'package:flutter/material.dart';
 
@@ -17,7 +15,7 @@ class SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 2), () {
-      // moveToHome();
+      moveToHome();
     });
   }
 
