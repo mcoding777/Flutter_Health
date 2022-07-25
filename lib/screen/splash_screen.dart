@@ -20,10 +20,7 @@ class SplashScreenState extends State<SplashScreen> {
   }
 
   void moveToHome() {
-    Navigator.of(context).pushReplacement(MaterialPageRoute(
-        builder: (context) => const HomeScreen(
-              title: 'Flutter_Health',
-            )));
+    Navigator.of(context).pushNamed('/home');
   }
 
   @override
