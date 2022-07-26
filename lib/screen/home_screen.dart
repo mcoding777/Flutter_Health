@@ -34,35 +34,33 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      child: Scaffold(
-        appBar: AppBar(
-          title: const Text('BottomNavigationBar Sample'),
-        ),
-        body: Center(
-          child: _widgetOptions.elementAt(_selectedIndex),
-        ),
-        bottomNavigationBar: BottomNavigationBar(
-          items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: 'Home',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.business),
-              label: 'Add',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.settings),
-              label: 'My',
-            ),
-          ],
-          showSelectedLabels: false,
-          showUnselectedLabels: false,
-          currentIndex: _selectedIndex,
-          selectedItemColor: Colors.amber[800],
-          onTap: _onItemTapped,
-        ),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('BottomNavigationBar Sample'),
+      ),
+      body: Center(
+        child: _widgetOptions.elementAt(_selectedIndex),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.business),
+            label: 'Add',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            label: 'My',
+          ),
+        ],
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        currentIndex: _selectedIndex,
+        selectedItemColor: Colors.amber[800],
+        onTap: _onItemTapped,
       ),
     );
   }

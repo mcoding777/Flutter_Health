@@ -1,5 +1,5 @@
-import 'dart:async';
 import 'package:flutter/material.dart';
+import 'dart:async';
 
 import './home_screen.dart';
 
@@ -11,8 +11,6 @@ class SplashScreen extends StatefulWidget {
 }
 
 class SplashScreenState extends State<SplashScreen> {
-  bool _isLoading = true;
-
   @override
   void initState() {
     super.initState();
@@ -23,19 +21,17 @@ class SplashScreenState extends State<SplashScreen> {
 
   void moveToHome() {
     setState(() {
-      _isLoading = false;
+      Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (context) => const HomeScreen()));
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _isLoading
-          ? Container(
-              color: Colors.grey[900],
-              child: Center(child: Image.asset('images/logo_light.png')),
-            )
-          : const HomeScreen(),
-    );
+        body: Container(
+      color: Colors.grey[900],
+      child: Center(child: Image.asset('images/logo_light.png')),
+    ));
   }
 }

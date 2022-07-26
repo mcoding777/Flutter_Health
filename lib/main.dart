@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:health/screen/splash_screen.dart';
 
 import './screen/splash_screen.dart';
 
@@ -13,14 +14,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      initialRoute: '/',
-      routes: {
-        '/': (context) => const SplashScreen(),
-      },
-    );
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: const SplashScreen());
   }
 }
