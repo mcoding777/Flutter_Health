@@ -39,15 +39,15 @@ class _HomeScreenState extends State<HomeScreen> {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: ImageIcon(AssetImage('images/home_light.png'), size: 27),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
+            icon: ImageIcon(AssetImage('images/add_light.png'), size: 27),
             label: 'Add',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
+            icon: ImageIcon(AssetImage('images/my_light.png'), size: 27),
             label: 'My',
           ),
         ],
