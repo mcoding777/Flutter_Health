@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:health/screen/splash_screen.dart';
 
 import './screen/splash_screen.dart';
-import './style/color.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,12 +15,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData.dark().copyWith(
-          bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          bottomNavigationBarTheme: const BottomNavigationBarThemeData(
             backgroundColor: Colors.black26,
-            selectedIconTheme: IconThemeData(
-              size: 30,
-              color: selectedColor,
-            ),
           ),
         ),
         home: const SplashScreen());
