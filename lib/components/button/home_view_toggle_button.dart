@@ -25,21 +25,17 @@ class _HomeViewToggleButtonState extends State<HomeViewToggleButton> {
   Widget build(BuildContext context) {
     return ToggleButtons(
       onPressed: (int index) {
-        List<Button> newButtons = [...buttons];
-        // 각 버튼을 돌면서 isSelected 값 변경하기
-        for (int buttonIndex = 0; buttonIndex < buttons.length; buttonIndex++) {
-          Button newButton = Button(
-              widget: buttons[buttonIndex].widget,
-              isSelected: buttons[buttonIndex].isSelected);
-          if (buttonIndex == index) {
-            newButton.isSelected = true;
-          } else {
-            newButton.isSelected = false;
-          }
-          newButtons[buttonIndex] = newButton;
-        }
         setState(() {
-          buttons = newButtons;
+          // 각 버튼을 돌면서 isSelected 값 변경하기
+          for (int buttonIndex = 0;
+              buttonIndex < buttons.length;
+              buttonIndex++) {
+            if (buttonIndex == index) {
+              buttons[buttonIndex].isSelected = true;
+            } else {
+              buttons[buttonIndex].isSelected = false;
+            }
+          }
         });
       },
       isSelected: buttons.map((e) => e.isSelected).toList(),
