@@ -9,7 +9,7 @@ List<ExerciseSet> sampleSets = <ExerciseSet>[
 ];
 
 // 데이터베이스에 저장될 운동 기록 데이터
-List<TodayRecord> sampleRecord = [
+List<TodayRecord> sampleRecords = [
   TodayRecord(workout: 'Bench Press', records: sampleSets),
   TodayRecord(workout: 'Incline Chest Press', records: sampleSets),
   TodayRecord(workout: 'Barbell', records: sampleSets),

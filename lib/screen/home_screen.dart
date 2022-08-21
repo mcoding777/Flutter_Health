@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../components/button/day_toggle_button.dart';
+import '../components/home/home_record_card.dart';
+import '../components/home/home_toggle_button.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -16,8 +17,8 @@ class _HomeScreenState extends State<HomeScreen> {
       padding: const EdgeInsets.all(10),
       child: Column(
         children: const [
-          Align(alignment: Alignment.centerRight, child: DayToggleButton()),
-          Text('Index 0: Home'),
+          Align(alignment: Alignment.centerRight, child: HomeToggleButton()),
+          Align(alignment: Alignment.center, child: HomeRecordCard()),
         ],
       ),
     );

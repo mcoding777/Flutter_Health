@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:health/models/button.dart';
 
-class DayToggleButton extends StatefulWidget {
-  const DayToggleButton({Key? key}) : super(key: key);
+class HomeToggleButton extends StatefulWidget {
+  const HomeToggleButton({Key? key}) : super(key: key);
 
   @override
-  DayToggleButtonState createState() => DayToggleButtonState();
+  HomeToggleButtonState createState() => HomeToggleButtonState();
 }
 
-class DayToggleButtonState extends State<DayToggleButton>
+class HomeToggleButtonState extends State<HomeToggleButton>
     with SingleTickerProviderStateMixin {
   // AnimationController Timer (1개의 애니메이션)
   late TabController _tabController;
