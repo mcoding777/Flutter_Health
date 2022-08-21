@@ -12,11 +12,14 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: const [
-        DayToggleButton(),
-        Text('Index 0: Home'),
-      ],
+    return Container(
+      padding: const EdgeInsets.all(10),
+      child: Column(
+        children: const [
+          Align(alignment: Alignment.centerRight, child: DayToggleButton()),
+          Text('Index 0: Home'),
+        ],
+      ),
     );
   }
 }
