@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../components/button/home_view_toggle_button.dart';
+import '../components/button/day_toggle_button.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -14,8 +14,8 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Column(
       children: const [
-        HomeViewToggleButton(),
-        Text('Index 0: Home 수정 예정'),
+        DayToggleButton(),
+        Text('Index 0: Home'),
       ],
     );
   }
