@@ -37,7 +37,7 @@ class HomeToggleButtonState extends State<HomeToggleButton>
     return LayoutBuilder(
       builder: (context, constraints) {
         return Container(
-          width: (constraints.maxWidth / 2),
+          width: (constraints.maxWidth / 2.5),
           height: 35,
           decoration: BoxDecoration(
             color: Colors.grey[500],
@@ -62,7 +62,7 @@ class HomeToggleButtonState extends State<HomeToggleButton>
                 const TextStyle(fontWeight: FontWeight.bold, fontSize: 12),
             labelColor: Colors.black,
             unselectedLabelStyle: const TextStyle(
-              fontWeight: FontWeight.w500,
+              fontWeight: FontWeight.w600,
             ),
             tabs: buttons.map((e) => e.widget).toList(),
             labelPadding: const EdgeInsets.all(0), // 글씨 흐릿해지는 현상 제거

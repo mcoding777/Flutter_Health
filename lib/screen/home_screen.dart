@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../components/home/home_record_card.dart';
 import '../components/home/home_toggle_button.dart';
+import '../models/dummy.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -14,11 +15,25 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(10),
+      padding: const EdgeInsets.only(top: 20, left: 30, right: 30),
       child: Column(
-        children: const [
-          Align(alignment: Alignment.centerRight, child: HomeToggleButton()),
-          Align(alignment: Alignment.center, child: HomeRecordCard()),
+        children: [
+          const Align(
+              alignment: Alignment.centerRight, child: HomeToggleButton()),
+          Container(
+            margin: const EdgeInsets.only(top: 10),
+            child: Align(
+              alignment: Alignment.center,
+              child: SizedBox(
+                height: 500,
+                child: ListView(
+                  children: sampleRecords
+                      .map((item) => HomeRecordCard(record: item))
+                      .toList(),
+                ),
+              ),
+            ),
+          )
         ],
       ),
     );
