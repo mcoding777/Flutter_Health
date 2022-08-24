@@ -5,7 +5,7 @@ import '../../models/record.dart';
 class HomeRecordCard extends StatefulWidget {
   const HomeRecordCard({Key? key, required this.record}) : super(key: key);
 
-  final TodayRecord record;
+  final dynamic record;
 
   @override
   HomeRecordCardState createState() => HomeRecordCardState();
@@ -26,13 +26,40 @@ class HomeRecordCardState extends State<HomeRecordCard> {
         ),
         width: constraints.maxWidth,
         height: (200),
-        child: Column(
-          children: const [
-            Text('1', style: TextStyle(color: Colors.black)),
-            Text('2', style: TextStyle(color: Colors.black)),
-            Text('3', style: TextStyle(color: Colors.black)),
-          ],
-        ),
+        child: LayoutBuilder(builder: (context, constraints) {
+          return Column(
+            children: [
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  widget.record['date'],
+                  style: const TextStyle(
+                      color: Colors.black,
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
+              Table(
+                  defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+                  children: widget.record['record']
+                      .map<TableRow>((item) => TableRow(children: <Widget>[
+                            Text(
+                              item['workout'],
+                              style: const TextStyle(color: Colors.black),
+                            ),
+                            Text(
+                              item['max(kg)'],
+                              style: const TextStyle(color: Colors.black),
+                            ),
+                            Text(
+                              item['rep'],
+                              style: const TextStyle(color: Colors.black),
+                            ),
+                          ]))
+                      .toList())
+            ],
+          );
+        }),
       );
     });
   }

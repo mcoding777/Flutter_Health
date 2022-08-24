@@ -27,7 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
               child: SizedBox(
                 height: 500,
                 child: ListView(
-                  children: sampleRecords
+                  children: homeSampleData
                       .map((item) => HomeRecordCard(record: item))
                       .toList(),
                 ),

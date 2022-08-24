@@ -14,3 +14,67 @@ List<TodayRecord> sampleRecords = [
   TodayRecord(workout: 'Incline Chest Press', records: sampleSets),
   TodayRecord(workout: 'Barbell', records: sampleSets),
 ];
+
+// home 더미 데이터
+List homeSampleData = [
+  {
+    'date': '2022. 07. 14',
+    'record': [
+      {
+        'workout': 'Bench Press',
+        'max(kg)': '100',
+        'rep': '5',
+      },
+      {
+        'workout': 'Bench Press',
+        'max(kg)': '100',
+        'rep': '5',
+      },
+      {
+        'workout': 'Bench Press',
+        'max(kg)': '100',
+        'rep': '5',
+      }
+    ]
+  },
+  {
+    'date': '2022. 07. 15',
+    'record': [
+      {
+        'workout': 'Bench Press',
+        'max(kg)': '100',
+        'rep': '5',
+      },
+      {
+        'workout': 'Bench Press',
+        'max(kg)': '100',
+        'rep': '5',
+      },
+      {
+        'workout': 'Bench Press',
+        'max(kg)': '100',
+        'rep': '5',
+      }
+    ]
+  },
+  {
+    'date': '2022. 07. 16',
+    'record': [
+      {
+        'workout': 'Bench Press',
+        'max(kg)': '100',
+        'rep': '5',
+      },
+      {
+        'workout': 'Bench Press',
+        'max(kg)': '100',
+        'rep': '5',
+      },
+      {
+        'workout': 'Bench Press',
+        'max(kg)': '100',
+        'rep': '5',
+      }
+    ]
+  }
+];
