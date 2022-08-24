@@ -29,8 +29,7 @@ class HomeDialogState extends State<HomeDialog> {
       children: <Widget>[
         Container(
           padding: const EdgeInsets.only(
-              left: 10.0, top: 10.0 + 10.0, right: 10.0, bottom: 10.0),
-          margin: const EdgeInsets.only(top: 10.0),
+              left: 10.0, top: 10.0, right: 10.0, bottom: 10.0),
           decoration: BoxDecoration(
               shape: BoxShape.rectangle,
               color: Colors.white,
@@ -40,34 +39,32 @@ class HomeDialogState extends State<HomeDialog> {
                     color: Colors.black, offset: Offset(0, 10), blurRadius: 10),
               ]),
           child: Column(
-            mainAxisSize: MainAxisSize.min,
+            // mainAxisSize: MainAxisSize.min,
             children: <Widget>[
+              Align(
+                alignment: Alignment.topRight,
+                child: IconButton(
+                  icon: const Icon(
+                    Icons.close_rounded,
+                    color: Colors.black,
+                    size: 30.0,
+                  ),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
+              ),
               Text(
                 widget.title,
-                style:
-                    const TextStyle(fontSize: 22, fontWeight: FontWeight.w600),
-              ),
-              const SizedBox(
-                height: 15,
+                style: const TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.black),
               ),
               Text(
                 widget.descriptions,
-                style: const TextStyle(fontSize: 14),
+                style: const TextStyle(fontSize: 14, color: Colors.black),
                 textAlign: TextAlign.center,
-              ),
-              const SizedBox(
-                height: 22,
-              ),
-              Align(
-                alignment: Alignment.bottomRight,
-                child: FloatingActionButton(
-                    onPressed: () {
-                      Navigator.of(context).pop();
-                    },
-                    child: Text(
-                      widget.text,
-                      style: const TextStyle(fontSize: 18),
-                    )),
               ),
             ],
           ),

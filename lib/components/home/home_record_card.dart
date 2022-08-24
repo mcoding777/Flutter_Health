@@ -17,6 +17,7 @@ class HomeRecordCardState extends State<HomeRecordCard> {
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
       return GestureDetector(
+        // Container에 onTap 기능을 추가하기 위한 위젯
         onTap: () {
           showDialog(
             context: context,
