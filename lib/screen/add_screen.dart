@@ -10,8 +10,15 @@ class AddScreen extends StatefulWidget {
 class _AddScreenState extends State<AddScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text('Index 1: Add'),
+    return const Container(
+      child: Column(
+        children: [
+          ElevatedButton(
+            onPressed: () {},
+            child: const Text('START'),
+          )
+        ],
+      ),
     );
   }
 }
