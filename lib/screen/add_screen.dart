@@ -15,9 +15,19 @@ class _AddScreenState extends State<AddScreen> {
     return Column(
       children: const [
         SizedBox(
-          height: 200,
+          height: 120,
           child: AddStartButton(),
         ),
+        Padding(
+          padding: EdgeInsets.only(left: 20, right: 20),
+          child: Align(
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Template +',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+          ),
+        )
       ],
     );
   }
