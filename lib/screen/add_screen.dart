@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../components/add/add_start_button.dart';
+import '../components/add/add_template_button.dart';
 
 class AddScreen extends StatefulWidget {
   const AddScreen({Key? key}) : super(key: key);
@@ -32,39 +33,8 @@ class _AddScreenState extends State<AddScreen> {
           height: 300,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(4),
-                child: Stack(
-                  children: <Widget>[
-                    Positioned.fill(
-                      child: Container(
-                        decoration: const BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: <Color>[
-                              Color(0xFF0D47A1),
-                              Color(0xFF1976D2),
-                              Color(0xFF42A5F5),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    TextButton(
-                      onPressed: () {
-                        print('버튼 클릭');
-                      },
-                      style: TextButton.styleFrom(
-                        padding: const EdgeInsets.only(
-                            left: 20, right: 20, top: 10, bottom: 10),
-                        primary: Colors.white,
-                        textStyle: const TextStyle(fontSize: 20),
-                      ),
-                      child: const Text('Template1'),
-                    ),
-                  ],
-                ),
-              ),
+            children: const [
+              AddTemplateButton(),
               Text('Template2'),
             ],
           ),
