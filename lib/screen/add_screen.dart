@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../components/add/add_start_button.dart';
+
 class AddScreen extends StatefulWidget {
   const AddScreen({Key? key}) : super(key: key);
 
@@ -10,15 +12,13 @@ class AddScreen extends StatefulWidget {
 class _AddScreenState extends State<AddScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Container(
-      child: Column(
-        children: [
-          ElevatedButton(
-            onPressed: () {},
-            child: const Text('START'),
-          )
-        ],
-      ),
+    return Column(
+      children: const [
+        SizedBox(
+          height: 300,
+          child: AddStartButton(),
+        ),
+      ],
     );
   }
 }
