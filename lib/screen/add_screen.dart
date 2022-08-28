@@ -15,7 +15,7 @@ class _AddScreenState extends State<AddScreen> {
     return Column(
       children: const [
         SizedBox(
-          height: 300,
+          height: 200,
           child: AddStartButton(),
         ),
       ],
