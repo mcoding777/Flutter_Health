@@ -25,7 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Align(
               alignment: Alignment.center,
               child: SizedBox(
-                height: 500,
+                height: 500, // ListView를 쓰려면 높이를 지정해야 함
                 child: ListView(
                   children: homeSampleData
                       .map((item) => HomeRecordCard(record: item))
